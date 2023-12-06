@@ -5,4 +5,4 @@
  *      Author: Admin
  */
 
-
+#include"fsm_automatic.h"
