@@ -10,6 +10,8 @@
 
 #include<stdio.h>
 #include<main.h>
+#include "button.h"
+#include "main.h"
 
 #define INIT			1
 #define RED-GREEN		2
@@ -26,12 +28,11 @@ extern int index_led;
 extern int horizontal_number;
 extern int vertical_number;
 
-void updateClockBuffer();
 void countDown();
 void setInitialValue(int horizontal, int vertical);
 void setHorizontalLeds(int red, int green, int yellow);
-void setHorizontalLeds(int red, int green, int yellow);
-void setHorizontalLeds(int red, int green, int yellow);
+void setVerticalLeds(int red, int green, int yellow);
+void setPedesLeds(int red, int green, int mixed);
 
 extern int red_duration;
 extern int green_duration;
