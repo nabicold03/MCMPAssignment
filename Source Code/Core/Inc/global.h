@@ -39,7 +39,9 @@ void setPedesLeds(int red, int green, int mixed);
 extern int red_duration;
 extern int green_duration;
 extern int yellow_duration;
+extern int pedeson;
 
-UART_HandleTypeDef huart2;
+extern UART_HandleTypeDef huart2;
+extern TIM_HandleTypeDef htim3;
 
 #endif /* INC_GLOBAL_H_ */
