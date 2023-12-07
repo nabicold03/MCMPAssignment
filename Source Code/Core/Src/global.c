@@ -11,10 +11,24 @@ int status=0;
 int horizontal_number=0;
 int vertical_number=0;
 
+int __io_putchar(int ch) {
+    HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+    return ch;
+}
+
 //time counting down
 void countDown(){
 	horizontal_number--;
 	vertical_number--;
+        printf("Remaining horizontal second: %d\r\n", horizontal_number);
+        printf("Remaining vertical second: %d\r\n", vertical_number);
+}
+
+void setInitialValue(int horizontal, int vertical){
+    horizontal_number = horizontal;
+    vertical_number = vertical;
+    printf("Remaining horizontal second: %d\r\n", horizontal_number);
+    printf("Remaining vertical second: %d\r\n", vertical_number);
 }
 
 void setHorizontalLeds(int red, int green, int yellow){
