@@ -12,6 +12,8 @@
 #include<main.h>
 #include "button.h"
 #include "main.h"
+#include "software_timer.h"
+
 
 #define INIT			1
 #define RED_GREEN		2
