@@ -61,8 +61,8 @@ all: main-build
 main-build: FinalProjectVxl.elf secondary-outputs
 
 # Tool invocations
-FinalProjectVxl.elf: $(OBJS) $(USER_OBJS) D:\MCMPAssignment\Source\ Code\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "FinalProjectVxl.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\MCMPAssignment\Source Code\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FinalProjectVxl.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+FinalProjectVxl.elf: $(OBJS) $(USER_OBJS) D:\FinalProjectVxl\Source\ Code\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "FinalProjectVxl.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\FinalProjectVxl\Source Code\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FinalProjectVxl.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
