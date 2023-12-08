@@ -72,3 +72,20 @@ void setVerticalLeds(int red, int green, int yellow){
         HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET);
     }
 }
+
+void setPedesLeds(int red, int green, int mixed){
+    if(red == SET){
+        HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin, SET);
+        HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, RESET);
+    }
+    if(green == SET){
+        HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin, RESET);
+        HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, SET);
+    }
+    if(mixed == SET){
+        HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, SET);
+        HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET);
+    }
+//    HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET);
+//    HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET);	Toggle Led error
+}

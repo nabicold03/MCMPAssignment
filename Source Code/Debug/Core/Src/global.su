@@ -3,3 +3,4 @@ global.c:25:6:countDown	8	static
 global.c:32:6:setInitialValue	16	static
 global.c:39:6:setHorizontalLeds	24	static
 global.c:57:6:setVerticalLeds	24	static
+global.c:76:6:setPedesLeds	24	static
