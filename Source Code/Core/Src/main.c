@@ -61,7 +61,30 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void wrapper(void) {
+  timerRun(0); // led duration
+  timerRun(1); //  7-segment counter 1s
+  timerRun(3); // blinking led
+  timerRun(9); // blinking led
+  getKeyInput(0);
+  getKeyInput(1);
+  getKeyInput(2);
+  getKeyInput(3);
+}
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  if (htim->Instance == TIM2) {
+    //SCH_Update();
+    timerRun(0); // led duration
+    timerRun(1); //  7-segment counter 1s
+    timerRun(3); // blinking led
+    timerRun(9);
+    getKeyInput(0);
+    getKeyInput(1);
+    getKeyInput(2);
+    getKeyInput(3);
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -96,7 +119,9 @@ int main(void)
   MX_TIM3_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  //SCH_Add_Task(wrapper, 0, 1);
+  //SCH_Add_Task(fsm_automatic_run, 0, 1);
+  //SCH_Add_Task(fsm_manual_run, 0, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -106,6 +131,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+   fsm_automatic_run();
+   fsm_manual_run();
+   //SCH_Dispatch_Tasks();
   }
   /* USER CODE END 3 */
 }
