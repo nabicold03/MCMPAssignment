@@ -13,6 +13,9 @@
 #include "button.h"
 #include "main.h"
 #include "software_timer.h"
+#include "scheduler.h"
+#include "fsm_automatic.h"
+#include "fsm_manual.h"
 
 
 #define INIT			1

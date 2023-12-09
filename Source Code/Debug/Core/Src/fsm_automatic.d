@@ -1,5 +1,5 @@
 Core/Src/fsm_automatic.o: ../Core/Src/fsm_automatic.c \
- ../Core/Inc/fsm_automatic.h ../Core/Inc/global.h ../Core/Inc/main.h \
+ ../Core/Inc/global.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -25,9 +25,9 @@ Core/Src/fsm_automatic.o: ../Core/Src/fsm_automatic.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/button.h ../Core/Inc/main.h ../Core/Inc/software_timer.h
-
-../Core/Inc/fsm_automatic.h:
+ ../Core/Inc/button.h ../Core/Inc/main.h ../Core/Inc/software_timer.h \
+ ../Core/Inc/scheduler.h ../Core/Inc/fsm_automatic.h ../Core/Inc/global.h \
+ ../Core/Inc/fsm_manual.h
 
 ../Core/Inc/global.h:
 
@@ -88,3 +88,11 @@ Core/Src/fsm_automatic.o: ../Core/Src/fsm_automatic.c \
 ../Core/Inc/main.h:
 
 ../Core/Inc/software_timer.h:
+
+../Core/Inc/scheduler.h:
+
+../Core/Inc/fsm_automatic.h:
+
+../Core/Inc/global.h:
+
+../Core/Inc/fsm_manual.h:
