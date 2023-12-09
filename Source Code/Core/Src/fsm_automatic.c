@@ -28,7 +28,7 @@ void fsm_automatic_run(){
 				setPedesLeds(RESET,SET,RESET);
 			}
 			if(timer_flag[0] == 1){
-				setPedesLeds(RESET,RESET,RESET);
+//				setPedesLeds(RESET,RESET,RESET);
 				setTimer(yellow_duration*100, 0);
 //				setHorizontalLeds(RESET,RESET,RESET); //D4-5 horizontal
 //				setVerticalLeds(RESET,RESET, RESET);
@@ -64,7 +64,7 @@ void fsm_automatic_run(){
 				setPedesLeds(RESET, SET, RESET);
 			}
 			if(timer_flag[0] == 1){
-				setPedesLeds(RESET,RESET,RESET);
+//				setPedesLeds(RESET,RESET,RESET);
 				setTimer(green_duration*100, 0);
 				status = GREEN_RED;
 				setInitialValue(green_duration, red_duration);
@@ -93,7 +93,7 @@ void fsm_automatic_run(){
 				setPedesLeds(SET, RESET, RESET);
 			}
 			if(timer_flag[0] == 1){
-				setPedesLeds(RESET,RESET,RESET);
+//				setPedesLeds(RESET,RESET,RESET);
 				setTimer(yellow_duration*100, 0);
 				status = YELLOW_RED;
 				setInitialValue(yellow_duration, yellow_duration);
@@ -122,7 +122,7 @@ void fsm_automatic_run(){
 				setPedesLeds(SET, RESET, RESET);
 			}
 			if(timer_flag[0] == 1){
-				setPedesLeds(RESET,RESET,RESET);
+//				setPedesLeds(RESET,RESET,RESET);
 				setTimer(green_duration*100, 0);
 				status = RED_GREEN;
 				setInitialValue(red_duration, green_duration);
