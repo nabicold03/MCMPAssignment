@@ -49,7 +49,7 @@ void fsm_automatic_run(){
 			if(isButtonPressed(0) == 1){
 				setPedesLeds(RESET,SET,RESET);
 				pedeson=1;
-				pedesduration = (red_duration+green_duration+yellow_duration)*100;
+				pedesduration = (red_duration+green_duration+yellow_duration)*200;
 				setTimer(pedesduration,9);
 			}
 			break;
@@ -78,7 +78,7 @@ void fsm_automatic_run(){
 			if(isButtonPressed(0) == 1){
 				setPedesLeds(RESET,SET,RESET);
 				pedeson=1;
-				pedesduration = (red_duration+green_duration+yellow_duration)*100;
+				pedesduration = (red_duration+green_duration+yellow_duration)*200;
 				setTimer(pedesduration,9);
 			}
 			break;
@@ -107,7 +107,7 @@ void fsm_automatic_run(){
 			if(isButtonPressed(0) == 1){
 				setPedesLeds(SET,RESET,RESET);
 				pedeson=1;
-				pedesduration = (red_duration+green_duration+yellow_duration)*100;
+				pedesduration = (red_duration+green_duration+yellow_duration)*200;
 				setTimer(pedesduration,9);
 			}
 			break;
@@ -136,7 +136,7 @@ void fsm_automatic_run(){
 			if(isButtonPressed(0) == 1){
 				setPedesLeds(SET,RESET,RESET);
 				pedeson=1;
-				pedesduration = (red_duration+green_duration+yellow_duration)*100;
+				pedesduration = (red_duration+green_duration+yellow_duration)*200;
 				setTimer(pedesduration,9);
 			}
 			break;
