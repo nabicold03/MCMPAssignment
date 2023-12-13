@@ -13,7 +13,6 @@ int vertical_number=0;
 int red_duration=5;
 int green_duration=3;
 int yellow_duration=2;
-int index_led=0;
 int pedeson=0;	//used to check whether ped button is pressed or not
 
 int __io_putchar(int ch) {

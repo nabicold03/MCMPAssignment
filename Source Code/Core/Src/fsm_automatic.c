@@ -11,13 +11,12 @@
 int buzzer_on = 0;
 int buzzer_toggle = 0;
 int buzzer_value = 40;
+int pedesduration;
 
 void fsm_automatic_run(){
 	switch(status) {
 		case INIT:
 			status = RED_GREEN;
-			int pedesduration = (red_duration + green_duration + yellow_duration)*100;
-			setTimer(pedesduration,9);
 			setInitialValue(red_duration, green_duration);
 			setTimer(green_duration*100, 0);
 			setTimer(100, 1);
@@ -76,7 +75,7 @@ void fsm_automatic_run(){
 				setPedesLeds(RESET,SET,RESET);
 				pedeson=1;
 				buzzer_on = 1;
-				int pedesduration = (red_duration+green_duration+yellow_duration)*200;
+				pedesduration = (red_duration+green_duration+yellow_duration)*200;
 				setTimer(pedesduration,9);
 				setTimer(10, 8);
 			}
@@ -123,7 +122,7 @@ void fsm_automatic_run(){
 				setPedesLeds(RESET,SET,RESET);
 				pedeson=1;
 				buzzer_on = 1;
-				int pedesduration = (red_duration+green_duration+yellow_duration)*200;
+				pedesduration = (red_duration+green_duration+yellow_duration)*200;
 				setTimer(pedesduration,9);
 				setTimer(10, 8);
 			}
@@ -156,7 +155,7 @@ void fsm_automatic_run(){
 				setPedesLeds(SET,RESET,RESET);
 				pedeson=1;
 				buzzer_on = 1;
-				int pedesduration = (red_duration+green_duration+yellow_duration)*200;
+				pedesduration = (red_duration+green_duration+yellow_duration)*200;
 				setTimer(pedesduration,9);
 				setTimer(10, 8);
 			}
@@ -190,7 +189,7 @@ void fsm_automatic_run(){
 				setPedesLeds(SET,RESET,RESET);
 				pedeson=1;
 				buzzer_on = 1;
-				int pedesduration = (red_duration+green_duration+yellow_duration)*200;
+				pedesduration = (red_duration+green_duration+yellow_duration)*200;
 				setTimer(pedesduration,9);
 				setTimer(10, 8);
 			}

@@ -29,7 +29,6 @@
 #define MAN_GREEN		15
 
 extern int status;
-extern int index_led;
 extern int horizontal_number;
 extern int vertical_number;
 
