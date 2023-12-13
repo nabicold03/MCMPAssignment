@@ -7,7 +7,7 @@
 
 #include"global.h"
 
-int status=0;
+int status=INIT;
 int horizontal_number=0;
 int vertical_number=0;
 int red_duration=5;
