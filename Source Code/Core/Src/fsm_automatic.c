@@ -10,7 +10,7 @@
 
 int buzzer_on = 0;
 int buzzer_toggle = 0;
-int buzzer_value = 40;
+int buzzer_value = 20;
 int pedesduration;
 
 void fsm_automatic_run(){
@@ -21,7 +21,7 @@ void fsm_automatic_run(){
 			setTimer(green_duration*100, 0);
 			setTimer(100, 1);
 			setTimer(10, 8);
-			buzzer_value = 100;
+			buzzer_value = 20;
 			HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 0);
 			break;
@@ -31,7 +31,7 @@ void fsm_automatic_run(){
 			if(timer_flag[9]==1){
 				pedeson=0;
 				buzzer_on = 0;
-				buzzer_value = 100;
+				buzzer_value = 20;
 				//HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_1);
 				setPedesLeds(RESET, RESET, RESET);
 			}
@@ -86,7 +86,7 @@ void fsm_automatic_run(){
 			if(timer_flag[9]==1){
 				pedeson=0;
 				buzzer_on = 0;
-				buzzer_value = 100;
+				buzzer_value = 20;
 				setPedesLeds(RESET, RESET, RESET);
 				//HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_1);
 			}
@@ -105,7 +105,7 @@ void fsm_automatic_run(){
 				setTimer(green_duration*100, 0);
 				status = GREEN_RED;
 				buzzer_on = 0;
-				buzzer_value = 100;
+				buzzer_value = 20;
 				setInitialValue(green_duration, red_duration);
 			}
 			if(timer_flag[1] == 1){
